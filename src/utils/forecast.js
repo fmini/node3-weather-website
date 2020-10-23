@@ -20,7 +20,10 @@ const forecast = (latitude, longitude, foreCallback) => {
           desctiption: body.current.weather_descriptions[0],
           temperature: body.current.temperature,
           feelslike: body.current.feelslike,
-          forecast: `It is ${body.current.weather_descriptions[0]} in ${body.location.name}, it is ${body.current.temperature} degrees and it feels like ${body.current.feelslike} degrees.`,
+          humidity: body.current.humidity,
+          uvIndex: body.current.uv_index,
+          forecast: `It is ${body.current.weather_descriptions[0]} in ${body.location.name}, it is ${body.current.temperature}℉ and it feels like ${body.current.feelslike}℉.
+          Current humidity is ${body.current.humidity}% and the UV Index is ${body.current.uv_index}`,
         }
         // `It is ${body.current.weather_descriptions[0]} in ${body.location.name}, it is ${body.current.temperature} degrees and it feels like ${body.current.feelslike} degrees.`
       );
